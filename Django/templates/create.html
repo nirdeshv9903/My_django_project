@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        background-color: #fff;
+        list-style: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Caveat", cursive;
+      }
+      .create {
+        height: 44rem;
+        display: flex;
+        justify-content: space-evenly;
+        background-image: url("https://images.hdqwalls.com/download/final-fantasy-xvi-se-1920x1080.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+      .create form {
+        height: 70%;
+        width: 50%;
+        margin-top: 6%;
+        padding-top: 2%;
+        text-align: center;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 8px #000;
+        background-color: transparent;
+      }
+      .create form input {
+        padding: 1% 25% 1% 25%;
+        margin-top: 2%;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 900;
+        font-size: larger;
+        background-color: #000000;
+        color: #ffffff;
+        opacity: 60%;
+      }
+      .create form button {
+        padding: 1% 10% 1% 10%;
+        margin-top: 2%;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 900;
+        font-size: larger;
+        color: #fff;
+        box-shadow: 2px 2px 5px #000;
+        background-color: transparent;
+      }
+    </style>
+    <title>create_page</title>
+  </head>
+  <body>
+    <section class="create">
+      <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" placeholder="Your Name" name="name" id="no1" /><br />
+        <input
+          type="text"
+          placeholder="Phone number"
+          name="phone_number"
+          id="no2"
+        /><br />
+        <input
+          type="email"
+          name="email"
+          id="no3"
+          placeholder="example@gmail.com"
+        /><br />
+        <input
+          type="text"
+          placeholder="dd-mm-yyyy"
+          name="date_of_birth"
+          id="no4"
+          required
+        /><br />
+        <input
+          type="text"
+          name="Address"
+          placeholder="Address"
+          id="no5"
+          required
+        /><br />
+        <input
+          type="text"
+          name="second_add"
+          id="no6"
+          placeholder="Second Address"
+          required
+        /><br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
